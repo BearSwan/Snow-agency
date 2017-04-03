@@ -407,10 +407,23 @@ h3 {
   padding: 10px 20px; }
 
 .form-submit {
+  cursor: pointer;
   margin-top: 30px;
   padding: 20px 20px;
   background-color: #0C0C0C;
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  position: relative; }
+  .form-submit:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    transition: 0.1s linear;
+    background: rgba(255, 255, 255, 0.3); }
+  .form-submit:hover:before {
+    width: 100%; }
 
 .info_list-item:first-child {
   font-weight: 800; }
