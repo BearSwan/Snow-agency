@@ -1,0 +1,32 @@
+.footer {
+  text-align: center;
+}
+/*NAV*/
+.footer-nav {
+  font-family: 'LeagueSpartan-Bold', sans-serif;
+  font-size: 9px;
+  margin: 20px 0;
+  letter-spacing: 5px;
+}
+.nav-item + .nav-item {
+  margin-left: 20px;
+}
+/*footer-socials*/
+$socials : tum, tw, vi;
+
+@each $social in $socials {
+  $i: index($socials, $social);
+  .footer-social_item .#{$social} {
+    background-image: url("../img/"+ $social +"-icon.png");
+  }
+}
+.footer-social_item{
+  list-style: none;
+  display: inline-block;
+  a {
+    background: no-repeat center center ;
+    width: 30px;
+    height: 30px;
+    display: block;
+  }
+}

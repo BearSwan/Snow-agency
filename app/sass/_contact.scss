@@ -1,0 +1,32 @@
+.contact {
+  padding-bottom: 50px;
+  &-text {
+    padding: 30px 0 0 30px;
+    &_up {
+      font-family: 'LeagueSpartan-Bold', sans-serif;
+      font-size: 9px;
+      color: #0b0c11;
+      letter-spacing: 3px;
+    }
+    &_title {
+      font-family: "PlayfairDisplay-Bold", sans-serif;
+      font-size: 32px;
+      margin: 20px;
+    }
+  }
+  &-button {
+    @extend .media-text_button;
+    color: #5da8ef;
+    margin: 0;
+
+  }
+}
+@media only screen and (max-width: 767px) {
+  .contact-img {
+    width: 100%;
+  }
+  .contact-text {
+    text-align: center;
+    width: 100%;
+  }
+}

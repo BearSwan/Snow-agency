@@ -1,0 +1,121 @@
+.hero {
+  position: relative;
+  padding-top: 40px;
+}
+/*HEADER*/
+.header {
+  position: relative;
+  margin-bottom: 40px;
+}
+/*logo*/
+.header-logo {
+  position: absolute;
+  top: -10px;
+}
+/*nav*/
+.nav {
+  font-family: 'LeagueSpartan-Bold', sans-serif;
+  font-size: 9px;
+  margin-left: 16.66%;
+  &-item {
+    color: #000000;
+    letter-spacing: 5px;
+  }
+}
+
+/*ASIDE*/
+.hero-aside-text {
+  font-family: 'LeagueSpartan-Bold', sans-serif;
+  font-size: 9px;
+  color: #0b0c11;
+  letter-spacing: 4px;
+  opacity: 0.2;
+  transform: rotate(-90deg);
+  transform-origin: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+}
+.hero-aside-socials {
+  position: absolute;
+  bottom: 0;
+  right: -15px;
+}
+
+/*hero-aside-social*/
+$socials : tum, tw, vi;
+
+@each $social in $socials {
+  $i: index($socials, $social);
+  .hero-aside-socials_item .#{$social} {
+    background-image: url("../img/"+ $social +"-icon.png");
+  }
+}
+.hero-aside-socials_item {
+  list-style: none;
+  a {
+    background: no-repeat center center ;
+    width: 30px;
+    height: 30px;
+    display: block;
+  }
+}
+
+/*BANNER*/
+.banner-text {
+  z-index: 2;
+  position: absolute;
+  top: 250px;
+  &_up {
+    color: #5da8ef;
+    letter-spacing: 5px;
+    font-size: 9px;
+    font-family: 'LeagueSpartan-Bold', sans-serif;
+  }
+  &_title {
+    font-size: 62px;
+    text-shadow: 1px 1px 40px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.banner-photo {
+  float: right;
+  &_item {
+    box-shadow: -20px 14px 60px 3px rgba(0,0,0, 0.4);
+  }
+}
+.banner-photo_item {
+  width: 100%;
+}
+/*MEDIA QUERIES*/
+@media only screen and (max-width: 767px) {
+  //aside
+  .hero-aside-text, .hero-aside-socials {
+    display: none;
+  }
+  //nav
+  .nav-item {
+    letter-spacing: 0;
+  }
+  //banner
+  .banner-photo_item {
+    box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.4);
+  }
+  .banner-text {
+    top: 80px;
+    &_title {
+      font-size: 22px;
+    }
+    &_main {
+      font-size: 9px;
+    }
+  }
+
+
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 922px ) {
+  .hero-aside-text, .hero-aside-socials {
+    display: none;
+  }
+}

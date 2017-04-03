@@ -1,0 +1,96 @@
+/*ARTICLE - 1 or 1 and 2*/
+.article-first, .article-second {
+  padding: 50px 0;
+  position: relative;
+}
+/*aside text*/
+.article-first-aside {
+  font-family: 'LeagueSpartan-Bold', sans-serif;
+  font-size: 9px;
+  color: #0b0c11;
+  letter-spacing: 4px;
+  opacity: 0.2;
+  transform: rotate(-90deg);
+  transform-origin: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/*img*/
+.article-first_img {
+  float: right;
+}
+.article-title {
+  font-size: 42px;
+}
+.article-button {
+  @extend .media-text_button;
+}
+/*main (title and number)*/
+.article-main {
+  position: relative;
+}
+.article-number {
+  font-family: "LeagueSpartan-Bold", sans-serif;
+  font-size: 130px;
+  color: #f9f9f9;
+}
+.article-title {
+  position: absolute;
+  bottom: 35px;
+}
+/*ARTICLE - 2*/
+/*aside text*/
+.article-second-aside {
+  font-family: 'LeagueSpartan-Bold', sans-serif;
+  font-size: 9px;
+  color: #0b0c11;
+  letter-spacing: 4px;
+  opacity: 0.2;
+  transform: rotate(-90deg);
+  transform-origin: right;
+  position: absolute;
+  left: 85px;
+}
+/*img*/
+.article-second_img {
+  position: absolute;
+  top: 0;
+  left: 200px;
+}
+/*text*/
+.article-second-text {
+  float: right;
+}
+/*MEDIA QUERIES*/
+@media only screen and (max-width: 767px) {
+  .article-first, .article-second {
+    padding: 20px 0;
+  }
+  //article first
+  .article-first-text, .article-second-text {
+    width: 100%;
+    float: none;
+    margin-bottom: 20px;
+  }
+  .article-first_img {
+    width: 100%;
+    float: none;
+  }
+  .article-first-aside, .article-second-aside {
+    display: none;
+  }
+  //article second
+  .article-second_img {
+    position: static;
+    width: 100%;
+  }
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 922px ) {
+  .article-second_img {
+    left: 150px;
+  }
+  .article-first-aside, .article-second-aside {
+    display: none;
+  }
+}

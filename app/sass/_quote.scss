@@ -1,0 +1,27 @@
+.quote {
+  text-align: center;
+  padding: 100px 0;
+  &-title {
+    margin-bottom: 15px;
+    font-family: "PlayfairDisplay-Regular", sans-serif;
+    font-size: 26px;
+  }
+  &-text {
+    margin-top: 10px;
+    @extend .banner-text_up;
+    color: #333;
+  }
+}
+/*MEDIA QUERIES*/
+@media only screen and ( max-width: 767px ) {
+  .quote {
+    padding: 40px 0;
+    &-title {
+      font-size: 18px;
+    }
+    &-text {
+      font-size: 9px;
+    }
+  }
+
+}
