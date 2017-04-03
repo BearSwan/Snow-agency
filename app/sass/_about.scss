@@ -1,0 +1,30 @@
+/*ABOUT*/
+.about {
+  background-color: #F6F6F6;
+  text-align: center;
+  padding: 100px 0;
+}
+.about-title_img {
+  width: 230px;
+  height: 70px;
+}
+.about-title_main {
+  font-family: 'PlayfairDisplay-Bold', sans-serif;
+}
+.about-title_text {
+  font-family: 'WorkSans-Regular', sans-serif;
+  font-size: 15px;
+  margin: 40px 0;
+}
+@media only screen and (max-width: 767px) {
+  .about {
+    padding: 20px 0;
+    &-title_main {
+      font-size: 24px;
+    }
+    &-title_img {
+      width: 200px;
+      height: 50px;
+    }
+  }
+}

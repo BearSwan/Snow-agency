@@ -1,0 +1,29 @@
+/*CLIENTS*/
+.clients {
+  padding: 60px 0;
+  &-img {
+    float: left;
+    &.mobile {
+      display: none;
+    }
+  }
+}
+.clients-img + .clients-img {
+  margin-left: 4%;
+}
+
+@media only screen and (max-width: 767px) {
+  .clients {
+    text-align: center;
+  }
+    .clients-img {
+    max-width: 120px;
+    height: 80px;
+    &.mobile {
+      display: block;
+    }
+      &.first {
+        margin-left: 4%;
+      }
+  }
+}

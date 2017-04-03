@@ -1,0 +1,23 @@
+/*TESTIMONIALS*/
+.testimonials {
+  text-align: center;
+  padding: 100px 0;
+  color: #FFFFFF;
+  background-image: url("../img/pattern.png");
+}
+.t-carousel_text {
+  font-family: "PlayfairDisplay-Italic", sans-serif;
+  font-size: 24px;
+}
+.t-carousel_name {
+  font-family: 'WorkSans-Medium', sans-serif;
+  font-size: 14px;
+}
+@media only screen and (max-width: 767px) {
+  .testimonials {
+    padding: 40px 0;
+  }
+  .t-carousel_text {
+    font-size: 18px;
+  }
+}

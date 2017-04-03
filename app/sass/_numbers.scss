@@ -1,0 +1,30 @@
+/*NUMBERS*/
+.numbers {
+  font-family: "WorkSans-Regular", sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  background-image: url("../img/pattern.png");
+  padding: 100px 0;
+  &-item {
+    float: left;
+  }
+}
+//numbers-images
+.numbers-img {
+  float: left;
+  font-size: 50px;
+  margin-right: 10px;
+}
+//numbers-text
+.numbers-text {
+  padding-top: 10px;
+}
+@media only screen and (max-width: 767px) {
+  .numbers {
+    text-align: center;
+    padding: 20px 0;
+    &-item, &-img {
+      float: none;
+    }
+  }
+}

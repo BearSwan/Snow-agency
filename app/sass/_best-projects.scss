@@ -1,0 +1,39 @@
+/*BEST PROJECTS*/
+.projects {
+  background-color: #F6F6F6;
+  padding: 100px 0;
+  &-title {
+    text-align: center;
+    &_main {
+      font-family: 'PlayfairDisplay-Bold', sans-serif;
+    }
+    &_text {
+      font-family: "WorkSans-Regular", sans-serif;
+      font-size: 15px;
+      margin: 40px 0 60px;
+    }
+  }
+}
+//project-photo
+.photo-item {
+  float: left;
+  &_img {
+    width: 100%;
+    padding: 20px;
+    margin: 20px 0;
+    height: 100px;
+    background-image: url("../img/inst-photo.png");
+    &.big {
+      height: 240px;
+    }
+  }
+}
+/*MEDIA QUERIES*/
+@media only screen and (max-width: 767px) {
+  .projects {
+    padding: 20px 0;
+  }
+  .photo-item {
+    float: none;
+  }
+}
