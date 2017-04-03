@@ -1,12 +1,7 @@
-body {
-  font-family: "Poppins-Light", sans-serif;
-  font-size: 14px;
-}
 .container {
   max-width: 1024px;
   margin: 0 auto;
   padding: 0 20px;
-  position: relative;
 }
 
 .clearfix:after {
@@ -19,19 +14,14 @@ body {
   margin: 0;
   padding: 0;
 }
-
-h1, h2 {
-  font-family: "PlayfairDisplay-Bold", sans-serif;
-}
-
-a {
-  text-decoration: none;
+body, html {
+  height: 100%;
 }
 
 /*GRID VIEW*/
 [class*="col-"] {
   float: left;
-  /*padding: 15px;*/
+  padding: 0 15px;
   /*border: 1px solid red;*/
 }
 .col-1 {width: 8.33%;}
@@ -47,18 +37,34 @@ a {
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
+@media only screen and (max-width: 767px) {
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+
+/*FONT-SIZE*/
+h3 {
+  font-size: 38px;
+}
 /*FONTS*/
 @font-face {
-  font-family: "LeagueSpartan-Bold";
+  font-family: "WorkSans-Bold";
   font-style: normal;
   font-weight: 600;
-  src: url("../fonts/LeagueSpartan-Bold.otf") format("opentype");
+  src: url("../fonts/WorkSans-Bold.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Poppins-Light";
+  font-family: "WorkSans-Regular";
   font-style: normal;
-  src: url("../fonts/Poppins-Light.ttf") format("truetype");
+  src: url("../fonts/WorkSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'WorkSans-Medium';
+  font-style: normal;
+  src: url("../fonts/WorkSans-Medium.ttf") format("truetype");
 }
 
 @font-face {
@@ -66,6 +72,11 @@ a {
   font-weight: 600;
   font-style: normal;
   src: url("../fonts/PlayfairDisplay-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PlayfairDisplay-Italic";
+  src: url("../fonts/PlayfairDisplay-Italic.ttf") format("truetype");
 }
 
 @font-face {

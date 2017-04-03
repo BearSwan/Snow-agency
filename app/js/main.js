@@ -1,12 +1,22 @@
+/*Testimonials carousel*/
 $(document).ready(function(){
-    $('.shop-catalog-wrapper').slick({
+    $('.t-carousel-wrapper').slick({
         dots: true,
         prevArrow: false,
         nextArrow: false,
         infinite: true,
         speed: 500,
+        slidesToShow: 1,
+        adaptiveHeight: true
+    });
+    /*Latest blog carousel*/
+    $('.b-carousel_wrapper').slick({
+        dots: true,
+        prevArrow: false,
+        nextArrow: false,
+        infinite: true,
         slidesToShow: 3,
-        adaptiveHeight: true,
+        slidesToScroll: 3,
         responsive: [
             {
                 breakpoint: 1024,
@@ -36,4 +46,20 @@ $(document).ready(function(){
             // instead of a settings object
         ]
     });
+    /*Anchors*/
+    $(".navigation a, .banner-scroll").on('click', function(event){
+        event.preventDefault();
+        console.log(event);
+        $('html, body').animate({
+            scrollTop: $( $.attr(this, 'href') ).offset().top
+        }, 1000);
+        $('.navigation').fadeOut();
+        $('.burg-wrapper').removeClass('change');
+    });
+    /*menu burger*/
+    $('.burg-wrapper').click(function() {
+        $('.navigation').fadeToggle();
+        $('.navigation').animate({width: '100%'});
+        $(".burg-wrapper").toggleClass('change');
+    })
 });

@@ -1,121 +1,107 @@
-.hero {
-  position: relative;
-  padding-top: 40px;
-}
-/*HEADER*/
 .header {
-  position: relative;
-  margin-bottom: 40px;
+background-color: darkgrey;
+padding-top: 20px;
+height: 100%;
 }
-/*logo*/
-.header-logo {
+//BANNER
+.header-banner {
+  text-align: center;
+}
+.banner-text {
   position: absolute;
-  top: -10px;
-}
-/*nav*/
-.nav {
-  font-family: 'LeagueSpartan-Bold', sans-serif;
-  font-size: 9px;
-  margin-left: 16.66%;
-  &-item {
-    color: #000000;
-    letter-spacing: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FFFFFF;
+  &_up {
+    font-family: 'WorkSans-Bold', sans-serif;
+    font-size: 14px;
+  }
+  &_mid {
+    font-family: 'PlayfairDisplay-Bold', sans-serif;
+    font-size: 48px;
+  }
+  &_low {
+    font-family: 'PlayfairDisplay-Italic', sans-serif;
+    font-size: 48px;
   }
 }
-
-/*ASIDE*/
-.hero-aside-text {
-  font-family: 'LeagueSpartan-Bold', sans-serif;
-  font-size: 9px;
-  color: #0b0c11;
-  letter-spacing: 4px;
-  opacity: 0.2;
-  transform: rotate(-90deg);
-  transform-origin: right;
-  position: absolute;
-  top: 0;
-  right: 0;
-
-}
-.hero-aside-socials {
+.banner-scroll {
+  font-size: 50px;
+  color: #FFFFFF;
   position: absolute;
   bottom: 0;
-  right: -15px;
+  margin-left: -25px;
 }
-
-/*hero-aside-social*/
-$socials : tum, tw, vi;
-
-@each $social in $socials {
-  $i: index($socials, $social);
-  .hero-aside-socials_item .#{$social} {
-    background-image: url("../img/"+ $social +"-icon.png");
-  }
-}
-.hero-aside-socials_item {
-  list-style: none;
-  a {
-    background: no-repeat center center ;
-    width: 30px;
-    height: 30px;
-    display: block;
-  }
-}
-
-/*BANNER*/
-.banner-text {
-  z-index: 2;
-  position: absolute;
-  top: 250px;
-  &_up {
-    color: #5da8ef;
-    letter-spacing: 5px;
-    font-size: 9px;
-    font-family: 'LeagueSpartan-Bold', sans-serif;
-  }
-  &_title {
-    font-size: 62px;
-    text-shadow: 1px 1px 40px rgba(0, 0, 0, 0.4);
-  }
-}
-
-.banner-photo {
-  float: right;
-  &_item {
-    box-shadow: -20px 14px 60px 3px rgba(0,0,0, 0.4);
-  }
-}
-.banner-photo_item {
+/*navigation*/
+.header-nav {
   width: 100%;
+  /*position: relative;*/
 }
+/*burger-button*/
+.burg-wrapper {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 3;
+}
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #FFFFFF;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+.change .bar2 {opacity: 0;}
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
+}
+/*menu burger button*/
+.navigation {
+  font-family: "PlayfairDisplay-Italic", sans-serif;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  &-item {
+    margin: 15px 0;
+    display: block;
+    letter-spacing: 8px;
+    font-size: 48px;
+    color: #FFF;
+    text-decoration: none;
+    }
+  }
+
 /*MEDIA QUERIES*/
+//992
+@media only screen and (max-width: 992px) {
+
+}
+// 767
 @media only screen and (max-width: 767px) {
-  //aside
-  .hero-aside-text, .hero-aside-socials {
+  .banner-scroll {
     display: none;
-  }
-  //nav
-  .nav-item {
-    letter-spacing: 0;
-  }
-  //banner
-  .banner-photo_item {
-    box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.4);
   }
   .banner-text {
-    top: 80px;
-    &_title {
-      font-size: 22px;
-    }
-    &_main {
-      font-size: 9px;
+    margin: auto;
+    &_mid, &_low {
+      font-size: 32px;
     }
   }
-
-
-}
-@media only screen and ( min-width: 768px ) and ( max-width: 922px ) {
-  .hero-aside-text, .hero-aside-socials {
-    display: none;
+  .navigation-item {
+    font-size: 32px;
   }
 }

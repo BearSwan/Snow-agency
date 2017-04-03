@@ -100,12 +100,6 @@
 {
     display: block;
 }
-
-.slick-initialized .slick-slide:focus,
-.slick-initialized .slick-slide:active
-{
-   outline: none;
-}
 .slick-loading .slick-slide
 {
     visibility: hidden;

@@ -1,32 +1,81 @@
+/*FOOTER*/
 .footer {
-  text-align: center;
+  padding-top: 100px;
+  background-color: #0C0C0C;
+  color: #FFFFFF;
+  &-about_text {
+    font-family: "PlayfairDisplay-Regular", sans-serif;
+    font-size: 15px;
+  }
+  &-about, &-twits, &-inst {
+    float: left;
+  }
+  &-title {
+    font-family: "PlayfairDisplay-Bold", sans-serif;
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  &-copyright {
+    font-family: 'WorkSans-Regular', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+    margin-top: 80px;
+    border-top: 1px solid #FFFFFF;
+    padding: 30px;
+    display: inline-block;
+  }
 }
-/*NAV*/
-.footer-nav {
-  font-family: 'LeagueSpartan-Bold', sans-serif;
-  font-size: 9px;
-  margin: 20px 0;
-  letter-spacing: 5px;
-}
-.nav-item + .nav-item {
-  margin-left: 20px;
-}
-/*footer-socials*/
-$socials : tum, tw, vi;
+/*about us - social*/
+
+$socials : fb, tw, g, be, pi, in;
 
 @each $social in $socials {
   $i: index($socials, $social);
-  .footer-social_item .#{$social} {
+  .about_social-item .#{$social} {
     background-image: url("../img/"+ $social +"-icon.png");
   }
 }
-.footer-social_item{
-  list-style: none;
+.footer-about_social {
+  margin-top: 30px;
+  margin-left: -10px;
+}
+.about_social-item {
   display: inline-block;
   a {
     background: no-repeat center center ;
     width: 30px;
     height: 30px;
     display: block;
+  }
+}
+//twits
+.footer-twits_list {
+  font-family: 'WorkSans-Regular', sans-serif;
+  list-style: inside;
+  list-style-image: url("../img/tw-icon.png");
+}
+.twits_list-item + .twits_list-item {
+  margin-top: 20px;
+}
+//photo
+.inst_photo-item {
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+  &.mobile {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .footer {
+    padding: 20px 0;
+    text-align: center;
+  }
+  //9 photo appears
+  .inst_photo-item {
+    &.mobile {
+      display: inline-block;
+    }
   }
 }
