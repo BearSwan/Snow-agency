@@ -410,11 +410,7 @@ h3 {
   margin-top: 30px;
   padding: 20px 20px;
   background-color: #0C0C0C;
-  color: #FFFFFF;
-  transition-duration: 1s; }
-  .form-submit:hover {
-    background-color: blue;
-    color: darkred; }
+  color: #FFFFFF; }
 
 .info_list-item:first-child {
   font-weight: 800; }
